@@ -1,0 +1,69 @@
+.header
+	position: absolute
+	display: flex
+	top: 0
+	left: 0
+	width: 100%
+	align-items: center
+
+.logo
+	position: relative
+	z-index: 20
+	left: -10px
+	top: -5px
+
+.nav
+	background-color: #509532
+	text-transform: uppercase
+	position: relative
+	bottom: 26px
+	padding-left: 80px
+	margin-left: -50px
+	flex: 1 1 100%
+	z-index: 10
+.nav-link
+	color: #fff
+	transition: .3s ease
+	display: inline-block
+	white-space: nowrap
+	&:before
+		content: ''
+		width: 1.5625rem
+		height: 1.5625rem
+		background-image: url(../img/general/nav-icon.png)
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		display: inline-block
+		vertical-align: text-bottom
+		margin-right: 10px
+	&:nth-child(2)
+		&:before
+			background-image: url(../img/general/nav-icon1.png)
+	&:nth-child(3)
+		&:before
+			background-image: url(../img/general/nav-icon2.png)
+	&:nth-child(4)
+		&:before
+			background-image: url(../img/general/nav-icon3.png)
+	&:nth-child(5)
+		&:before
+			background-image: url(../img/general/nav-icon4.png)
+	span
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			height: 1px
+			background-color: #fff
+			bottom: 0
+			width: 0
+			left: 0
+			transition: .3s ease
+	&:hover
+		color: #fff
+		// text-shadow: 0 0 .65px #fff, 0 0 .65px #fff
+		text-shadow: 0 0 .8px #fff, 0 0 .8px #fff, 0 0 .8px #fff
+		span
+			&:after
+				width: 100%

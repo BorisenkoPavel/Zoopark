@@ -1,0 +1,19 @@
+extends template/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+block content
+	section.section-banner
+		.swiper-container.banner-slider
+			.swiper-wrapper
+				.swiper-slide
+					.embed-responsive.embed-responsive-21by9
+						.embed-responsive-item.banner-item(style="background-image: url('img/content/img1.jpg')")
+				.swiper-slide
+					.embed-responsive.embed-responsive-21by9
+						.embed-responsive-item.banner-item(style="background-image: url('img/content/img1.jpg')")
+			.swiper-pagination-container
+				.swiper-pagination-btn смотреть сайт дальше
+				.swiper-pagination.swiper-pagination--banner
+	.section.section

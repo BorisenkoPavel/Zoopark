@@ -1,0 +1,130 @@
+@import vars
+@import fonts
+@import mixins/mixins
+@import libs/libs
+
+html
+	@include fluid-type($min_width, $max_width, $min_font, $max_font)
+	height: 100%
+
+h1
+	font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem
+	@include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2*$mod_2*$mod_2 *$min_font)
+	line-height: 1.2
+
+h2
+	font-size: $mod_1*$mod_1*$mod_1 *0.5rem
+	@include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2*$mod_2 *$min_font)
+	line-height: 1.2
+
+h3 
+	font-size: $mod_1*$mod_1 *1rem
+	@include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font)
+	line-height: 1.2
+
+h4
+	font-size: $mod_1*$mod_1*$mod_1 *0.5rem
+	@include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font)
+	line-height: 1.2
+
+h5 
+	font-size: $mod_1*$mod_1 *1rem
+	@include fluid-type($min_width, $max_width, $mod_1 *$min_font, $mod_2 *$min_font)
+	line-height: 1.2
+
+h1, h2, h3, h4, h5, h6
+	margin-bottom: 1em
+	font-weight: normal
+body
+  height: 100%
+  font-family: $d-font
+
+ul, li
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea
+  vertical-align: middle
+
+textarea
+  resize: none
+
+section
+  position: relative
+
+input,
+select,
+button
+  outline: none
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  flex: 1 0 auto
+
+.section-banner
+
+
+.banner-item
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: bottom center
+	animation: zoom 30s infinite ease
+
+@keyframes zoom
+	from
+		transform: scale(1)
+	50%
+		transform: scale(1.5) 
+	to
+		transform: scale(1)
+
+.swiper-pagination-container
+	position: absolute
+	display: flex
+	flex-direction: column
+	align-items: center
+	background-color: $accent
+	bottom: 0
+	z-index: 100
+	left: 50%
+	transform: translatex(-50%)
+	color: #fff
+	padding: 1.25rem 2.1875rem 0.625rem
+	border-radius: 35px 35px 0 0
+.swiper-pagination-btn
+	text-transform: uppercase
+	margin-bottom: 5px
+.swiper-pagination--banner
+	position: relative
+.swiper-pagination--banner
+	bottom: 0
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active
+	background-color: $accent
+	border: 3px solid #ffffff
+.swiper-pagination-bullet
+	width: 11px
+	height: 11px
+	border-radius: 50%
+	border: 3px solid $accent
+	background-color: #fff
+	opacity: 1
+	margin-right: 14px
+	transition: .3s ease
+	
+@import modules/modules
+@import media

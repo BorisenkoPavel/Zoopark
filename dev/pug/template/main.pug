@@ -1,0 +1,30 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="css/main.min.css")
+		//- link(rel="icon" href="img/favicon/favicon.ico")
+		//- link(rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png")
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body(class=pageClass)
+		.wrapper
+			include ../modules/header/header
+			.content
+				block content
+			include ../modules/footer/footer
+
+		script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+		script(src="js/scripts.min.js")
+
+		block script
