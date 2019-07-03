@@ -34,13 +34,13 @@ h5
 
 h1, h2, h3, h4, h5, h6
 	margin-bottom: 1em
+	font-family: $a-font, 'sans-serif'
 	font-weight: normal
-	font-family: $d-font
-	font-weight: 400
-
+	text-align: center
+	color: $accent
 body
   height: 100%
-  font-family: $d-font
+  font-family: $d-font, 'sans-serif'
 
 ul, li
   list-style-type: none
@@ -57,18 +57,26 @@ img,
 svg,
 video,
 textarea
-  vertical-align: middle
+	vertical-align: middle
 
 textarea
-  resize: none
+	resize: none
 
 section
-  position: relative
+	position: relative
+	padding: 5vh
 
 input,
 select,
 button
   outline: none
+
+.nolink
+	color: inherit
+	&:hover
+		color: inherit
+		text-decoration: none
+
 
 .wrapper
   display: flex
@@ -79,24 +87,28 @@ button
   flex: 1 0 auto
 
 .section-banner
-
+	padding: 0
+	margin-bottom: 5vh
 
 .banner-item
+	background-position: 0 60%
 	background-size: 130%
-	background-repeat: no-repeat
-	background-position: bottom left
+	position: absolute
+	top: 0
+	bottom: 0
+	left: -25%
+	width: 150%
+	height: 100%
+	border: 0
 	animation: zoom 30s infinite ease
 	will-change: auto
 @keyframes zoom
 	from
 		transform: scale(1)
-		background-position: bottom left
 	50%
-		transform: scale(1.2)
-		background-position: bottom  right
+		transform: scale(1.3) translatex(-10%)
 	to
 		transform: scale(1)
-		background-position: bottom left
 
 .swiper-pagination-container
 	position: absolute
@@ -132,5 +144,88 @@ button
 	margin-right: 14px
 	transition: .3s ease
 	
+
+.card-item
+	border: 2px solid #7eb53b
+	transition: .3s ease
+	padding: 0.625rem 0.625rem 0
+	display: block
+	margin: 15px 0
+	&:hover
+		box-shadow: 0 0 0px 10px  rgba(126,181,59, 0.6)
+		.card-title
+			font-weight: bold
+		.card-photo
+			transform: scale(1.1)
+.card-photo
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transition: 1s ease
+.card-title
+	font-size: 1.25rem
+	text-transform: uppercase
+	position: relative
+	height: 4.375rem
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	&:before
+		content: ''
+		position: relative
+		width: 2.5rem
+		height: 2.5rem
+		margin-right: 0.625rem
+		background-image: url(../img/general/job-icon1.png)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+.card-container
+	&:nth-child(2)
+		.card-title:before
+			background-image: url(../img/general/job-icon2.png)
+	&:nth-child(3)
+		.card-title:before
+			background-image: url(../img/general/job-icon3.png)
+	&:nth-child(4)
+		.card-title:before
+			background-image: url(../img/general/job-icon4.png)
+
+.card-list--begin
+	.card-container
+		&:nth-child(1)
+			.card-title:before
+				background-image: url(../img/general/title-icon1.png)
+		&:nth-child(2)
+			.card-title:before
+				background-image: url(../img/general/title-icon2.png)
+		&:nth-child(3)
+			.card-title:before
+				background-image: url(../img/general/title-icon3.png)
+		&:nth-child(4)
+			.card-title:before
+				background-image: url(../img/general/title-icon4.png)
+		&:nth-child(5)
+			.card-title:before
+				background-image: url(../img/general/title-icon5.png)
+		&:nth-child(6)
+			.card-title:before
+				background-image: url(../img/general/title-icon6.png)
+
+.card-list--nature
+	.card-container
+		&:nth-child(1)
+			.card-title:before
+				background-image: url(../img/general/icon-nat1.png)
+		&:nth-child(2)
+			.card-title:before
+				background-image: url(../img/general/icon-nat2.png)
+		&:nth-child(3)
+			.card-title:before
+				background-image: url(../img/general/icon-nat3.png)
+		&:nth-child(4)
+			.card-title:before
+				background-image: url(../img/general/icon-nat4.png)
 @import modules/modules
 @import media

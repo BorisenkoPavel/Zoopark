@@ -4,21 +4,103 @@ block variables
 	- var title = 'Главная страница'
 	- var pageClass = 'index-page'
 block content
+
 	section.section-banner
 		.swiper-container.banner-slider
 			.swiper-wrapper
 				.swiper-slide
 					.embed-responsive.embed-responsive-21by9
-						.embed-responsive-item.banner-item(style="background-image: url('img/content/img1.jpg')")
+						.embed-responsive-item.banner-item(style="background-image: url('img/content/banner-img.jpg')")
 				.swiper-slide
 					.embed-responsive.embed-responsive-21by9
-						.embed-responsive-item.banner-item(style="background-image: url('img/content/img1.jpg')")
+						.embed-responsive-item.banner-item(style="background-image: url('img/content/banner-img.jpg')")
 			.swiper-pagination-container
 				.swiper-pagination-btn смотреть сайт дальше
 				.swiper-pagination.swiper-pagination--banner
-	.section.section-job
+	
+	section.section-job
 		.container
 			h1 Просветительская работа
-		.row.job-list
-			.col-12.col-sm-6.col-lg-3
-				.job-item
+		.row.card-list
+			.col-12.col-sm-6.col-lg-3.card-container
+				a(href="#" class="nolink").card-item
+					.embed-responsive-1by1.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img.jpg')")
+					.card-title экскурсии школьникам
+			.col-12.col-sm-6.col-lg-3.card-container
+				a(href="#" class="nolink").card-item
+					.embed-responsive-1by1.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img2.jpg')")
+					.card-title по  экотропе
+			.col-12.col-sm-6.col-lg-3.card-container
+				a(href="#" class="nolink").card-item
+					.embed-responsive-1by1.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img1.jpg')")
+					.card-title книга отзывов
+			.col-12.col-sm-6.col-lg-3.card-container
+				a(href="#" class="nolink").card-item 
+					.embed-responsive-1by1.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img4.jpg')")
+					.card-title полевые работы студентов биофака
+
+	section.section-about-us
+		.container
+			h1 Об Экопарке Фонда «Начинание»
+		.row.card-list.card-list--begin
+			.col-12.col-sm-6.col-lg-4.card-container
+				a(href="#" class="nolink").card-item
+					.embed-responsive-4by3.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-us6.jpg')")
+					.card-title Школа Юннатов буклет
+			.col-12.col-sm-6.col-lg-4.card-container
+				a(href="#" class="nolink").card-item
+					.embed-responsive-4by3.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-us5.jpg')")
+					.card-title Животный мир Экопарка
+			.col-12.col-sm-6.col-lg-4.card-container
+				a(href="#" class="nolink").card-item
+					.embed-responsive-4by3.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-us4.jpg')")
+					.card-title Как нас найти
+			.col-12.col-sm-6.col-lg-4.card-container
+				a(href="#" class="nolink").card-item 
+					.embed-responsive-4by3.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-us3.jpg')")
+					.card-title Нас поддерживают 
+		
+			.col-12.col-sm-6.col-lg-4.card-container
+				a(href="#" class="nolink").card-item 
+					.embed-responsive-4by3.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-us4.jpg')")
+					.card-title Задачи Фонда Сотрудники всегда вам рады
+		
+			.col-12.col-sm-6.col-lg-4.card-container
+				a(href="#" class="nolink").card-item 
+					.embed-responsive-4by3.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-us2.jpg')")
+					.card-title Галерея
+
+	section.section-job
+		.container
+			h1 Просветительская работа
+		.row.card-list.card-list--nature
+			.col-12.col-sm-6.col-lg-3.card-container
+				a(href="#" class="nolink").card-item
+					.embed-responsive-1by1.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-nat4.jpg')")
+					.card-title экскурсии школьникам
+			.col-12.col-sm-6.col-lg-3.card-container
+				a(href="#" class="nolink").card-item
+					.embed-responsive-1by1.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-nat3.jpg')")
+					.card-title по  экотропе
+			.col-12.col-sm-6.col-lg-3.card-container
+				a(href="#" class="nolink").card-item
+					.embed-responsive-1by1.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-nat2.jpg')")
+					.card-title книга отзывов
+			.col-12.col-sm-6.col-lg-3.card-container
+				a(href="#" class="nolink").card-item 
+					.embed-responsive-1by1.embed-responsive
+						.embed-responsive-item.card-photo(style="background-image: url('img/content/img-nat1.jpg')")
+					.card-title полевые работы студентов биофака
