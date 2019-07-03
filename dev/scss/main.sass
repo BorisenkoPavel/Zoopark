@@ -35,6 +35,9 @@ h5
 h1, h2, h3, h4, h5, h6
 	margin-bottom: 1em
 	font-weight: normal
+	font-family: $d-font
+	font-weight: 400
+
 body
   height: 100%
   font-family: $d-font
@@ -79,18 +82,21 @@ button
 
 
 .banner-item
-	background-size: cover
+	background-size: 130%
 	background-repeat: no-repeat
-	background-position: bottom center
+	background-position: bottom left
 	animation: zoom 30s infinite ease
-
+	will-change: auto
 @keyframes zoom
 	from
 		transform: scale(1)
+		background-position: bottom left
 	50%
-		transform: scale(1.5) 
+		transform: scale(1.2)
+		background-position: bottom  right
 	to
 		transform: scale(1)
+		background-position: bottom left
 
 .swiper-pagination-container
 	position: absolute
