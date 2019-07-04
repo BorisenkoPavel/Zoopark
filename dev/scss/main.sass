@@ -37,10 +37,11 @@ h1, h2, h3, h4, h5, h6
 	font-family: $a-font, 'sans-serif'
 	font-weight: normal
 	text-align: center
-	color: $accent
+	color: $at
 body
-  height: 100%
-  font-family: $d-font, 'sans-serif'
+	height: 100%
+	font-family: $d-font, 'sans-serif'
+	color: $text
 
 ul, li
   list-style-type: none
@@ -50,6 +51,11 @@ ul, li
 a
   text-decoration: none
 
+.text-big
+	font-weight: bold
+	font-size: 1.4375rem
+	text-transform: uppercase
+	
 audio,
 canvas,
 iframe,
@@ -230,16 +236,73 @@ button
 				background-image: url(../img/general/icon-nat4.png)
 
 
+.news-form-container
+	border: 0.3125rem solid #175528
+	border-radius: 3.125rem 0 0 0
+	border-bottom: none
 
+.news-container
+	border: 0.3125rem solid #175528
+	border-radius: 0 0 3.125rem 0
+	border-top: none
+	padding: 3.4375rem
 
+.news-item
+	margin-bottom: 1.4375rem
+	padding-left: 2.1875rem
+	font-size: 1.4375rem
+	position: relative
+	transition: .3s ease
+	&:hover
+		color: #505f3f
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 5px
+		background-image: url(../img/general/list-icon1.png)
+		background-repeat: no-repeat
+		background-position: center
+		width: 25px
+		height: 20px
 
-
-
-
-
-
-
-
+.form-img 
+	width: 50px
+	padding-right: 0.625rem
+.form-news
+	background-color: #175528
+	display: flex
+	align-items: center
+	flex: 1 1 50%
+	width: 50%
+	border-radius: 3.125rem 0 3.125rem 0
+	border-top: none 
+	padding: 0 35px
+.input-email
+	position: relative
+	border-radius: 15px
+	flex: 1 1 100%
+	width: 100%
+	display: flex
+	background-color: #fff
+	padding: 0.3125rem
+	input
+		height: 2.6rem
+		flex: 1 1
+		// width: 100%
+		border-radius: 15px
+		border: none
+		padding-right: 5px
+.btn--input-email
+	position: relative
+	width: auto
+	background-color: $accent
+	border-radius: 15px
+	padding: 0 20px
+	color: #fff
+	text-transform: uppercase
+	display: flex
+	align-items: center
 
 @import modules/modules
 @import media
