@@ -38,6 +38,11 @@ h1, h2, h3, h4, h5, h6
 	font-weight: normal
 	text-align: center
 	color: $at
+
+.subtitle
+	font-weight: 500
+	color: $at
+	font-size: 1.25rem
 body
 	height: 100%
 	font-family: $d-font, 'sans-serif'
@@ -53,9 +58,12 @@ a
 
 .text-big
 	font-weight: bold
-	font-size: 1.4375rem
+	font-size: 1.25rem
 	text-transform: uppercase
 	
+.text-accent
+	color: $at
+
 audio,
 canvas,
 iframe,
@@ -90,11 +98,19 @@ button
   height: 100%
 
 .content
-  flex: 1 0 auto
+	flex: 1 0 auto
+
+.sections-wrapper
+	background: url(../img/general/bg.png) no-repeat fixed center 800px/110% 80%
+
+.green-section
+	// background-color: #f5ffea
 
 .section-banner
 	padding: 0
-	margin-bottom: 5vh
+
+.section-job
+	padding-top: 10vh
 
 .banner-item
 	background-position: 0 60%
@@ -157,6 +173,7 @@ button
 	padding: 0.625rem 0.625rem 0
 	display: block
 	margin: 15px 0
+	background-color: #fff
 	&:hover
 		box-shadow: 0 0 0px 10px  rgba(126,181,59, 0.6)
 		.card-title
@@ -168,8 +185,10 @@ button
 	background-position: center
 	background-size: cover
 	transition: 1s ease
+	-webkit-backface-visibility: hidden
+	-moz-backface-visibility: hidden
+	-ms-backface-visibility: hidden
 .card-title
-	font-size: 1.25rem
 	text-transform: uppercase
 	position: relative
 	height: 4.375rem
@@ -235,22 +254,25 @@ button
 			.card-title:before
 				background-image: url(../img/general/icon-nat4.png)
 
+section.section-news
+	// background: linear-gradient(to bottom, #f5ffea, #fff)
 
 .news-form-container
 	border: 0.3125rem solid #175528
 	border-radius: 3.125rem 0 0 0
 	border-bottom: none
+	background-color: #fff
 
 .news-container
 	border: 0.3125rem solid #175528
 	border-radius: 0 0 3.125rem 0
 	border-top: none
 	padding: 3.4375rem
-
+	background-color: #fff
 .news-item
 	margin-bottom: 1.4375rem
 	padding-left: 2.1875rem
-	font-size: 1.4375rem
+	font-size: 1.25rem
 	position: relative
 	transition: .3s ease
 	&:hover
@@ -265,7 +287,8 @@ button
 		background-position: center
 		width: 25px
 		height: 20px
-
+.section-title-news
+	text-transform: uppercase
 .form-img 
 	width: 50px
 	padding-right: 0.625rem
@@ -303,6 +326,52 @@ button
 	text-transform: uppercase
 	display: flex
 	align-items: center
+
+.reviews-slider
+	position: relative
+
+.review-item__text
+	color: #000
+.review-item__photo
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+.fixed-slide
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	img
+		max-width: 230px 
+.btn-fixed-slide
+	width: 311px
+	height: 144px
+	background-image: url(../img/general/листок.png)
+	background-position: center
+	background-repeat: no-repeat
+	font-weight: 500
+	color: #fff
+	display: flex
+	align-items: center
+	flex-direction: column
+	justify-content: center
+	b 
+		text-transform: uppercase
+
+.section-park-video
+	padding-bottom: 12vh
+
+.park-section-bg
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background-image: url(../img/general/video-img.png)
+	background-size: cover
+	background-position: center bottom
+	z-index: -1
 
 @import modules/modules
 @import media
