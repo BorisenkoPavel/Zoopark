@@ -3,15 +3,33 @@
 
 /*==========  Desktop First  ==========*/
 
-// ≥1200px
-+media-breakpoint-down(xxl)
 
+
+// ≥1400px
++media-breakpoint-down(xl)
+	.nav
+		font-size: 0.75rem
+	.nav-link:before 
+		content: ''
+		width: 1.3625rem
+		height: 1.3625rem
 // ≥1200px
 +media-breakpoint-down(lg)
-	
+	.news-form-container
+		border: none
+		background-color: transparent
+		flex-direction: column
+	.form-news
+		padding: 25px 35px
+		width: 100%
+		flex: 1 1 100%
+		border-radius: 3.125rem 0 0 0
+
 // ≥992px
 +media-breakpoint-down(md)
-	
+	.park-section-bg
+		.embed-responsive.embed-responsive-4by3
+			width: 75%
 // ≥768px
 +media-breakpoint-down(sm)
 

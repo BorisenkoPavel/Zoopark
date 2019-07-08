@@ -87,6 +87,7 @@ button
 
 .nolink
 	color: inherit
+	transition: .3s ease
 	&:hover
 		color: inherit
 		text-decoration: none
@@ -99,6 +100,7 @@ button
 
 .content
 	flex: 1 0 auto
+	overflow-x: hidden
 
 .sections-wrapper
 	background: url(../img/general/bg.png) no-repeat fixed center 800px/110% 80%
@@ -112,18 +114,44 @@ button
 .section-job
 	padding-top: 10vh
 
+	
 .banner-item
-	background-position: 0 60%
-	background-size: 130%
-	position: absolute
-	top: 0
-	bottom: 0
-	left: -25%
-	width: 150%
-	height: 100%
-	border: 0
-	animation: zoom 30s infinite ease
-	will-change: auto
+
+	&__photo
+		width: 100%
+		height: 100%
+		background-position: 0 80%
+		background-size: cover
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		border: 0
+		animation: zoom 30s infinite ease
+		will-change: auto
+	&__title
+		font-size: 4.25rem
+		font-family: $a-font
+		font-weight: bold
+	&__title--small
+		font-size: 3rem
+	&__content
+		position: relative
+		z-index: 100
+		padding: 0 10vw 12vh
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: flex-end
+		height: 100%
+		line-height: 1.2
+		text-transform: uppercase
+		img
+			vertical-align: baseline
+		p 
+			font-size: 1.5625rem
+			text-transform: none
+
 @keyframes zoom
 	from
 		transform: scale(1)
@@ -191,7 +219,7 @@ button
 .card-title
 	text-transform: uppercase
 	position: relative
-	height: 4.375rem
+	height: 90px
 	display: flex
 	align-items: center
 	justify-content: center
@@ -327,6 +355,9 @@ section.section-news
 	display: flex
 	align-items: center
 
+.section-reviews
+	background-color: #fff
+
 .reviews-slider
 	position: relative
 
@@ -356,12 +387,22 @@ section.section-news
 	align-items: center
 	flex-direction: column
 	justify-content: center
+	&:hover
+		animation: rotate-btn .6s ease
 	b 
 		text-transform: uppercase
 
+@keyframes rotate-btn 
+	from
+		transform: rotate(0)
+	50%
+		transform: rotate(10deg)
+	to
+		transform: rotate(0)
+
+
 .section-park-video
 	padding-bottom: 12vh
-
 .park-section-bg
 	position: absolute
 	top: 0
@@ -371,7 +412,18 @@ section.section-news
 	background-image: url(../img/general/video-img.png)
 	background-size: cover
 	background-position: center bottom
+	transition: .2s linear
+	transform-origin: bottom
 	z-index: -1
+	// &:after
+	// 	content: ''
+	// 	position: absolute
+	// 	height: 10%
+	// 	border-radius: 80%
+	// 	bottom: 0
+	// 	left: 0
+	// 	right: 0
+	// 	border-bottom: 50px solid #fff
 
 @import modules/modules
 @import media

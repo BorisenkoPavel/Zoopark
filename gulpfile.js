@@ -62,7 +62,7 @@ gulp.task('scripts', function() {
   return gulp.src([
     // 'node_modules/bootstrap/js/dist/.js',
     'node_modules/swiper/dist/js/swiper.min.js',
-    // 'node_modules/aos/dist/js/aos.js',
+    'node_modules/aos/dist/aos.js',
     'node_modules/svg4everybody/dist/svg4everybody.min.js',
     'dev/js/common.js', // Always at the end
     ])

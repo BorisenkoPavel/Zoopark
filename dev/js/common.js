@@ -18,16 +18,21 @@ $(document).ready(function () {
 	});
 
 	$(window).scroll(function () {
-		var movement = -parseInt($(this).scrollTop() / 2.5);
+		var movement = -parseInt($(this).scrollTop() / 2.35);
 		$('.sections-wrapper').css({
 		backgroundPosition: 'center ' + (movement+800) + 'px'
 		});
 		});
 		
-	$('.section-park-video').scroll(function () {
-		var movement2 = -parseInt($(this).scrollTop() / 10);
-		$('.park-section-bg').css('transform', 'scale(' + movement2 +')');
-		console.log(movement2)
+		var parkPosition = $('.section-park-video').offset().top - $(window).height(); 
+		$(window).scroll(function () { 
+		//var movement2 = -parseInt($(this).scrollTop() / 10); 
+		var scrollPos = $(this).scrollTop(); 
+		if (scrollPos > parkPosition && scrollPos < parkPosition + 900) { 
+		$('.park-section-bg').css('transform', 'scale(' + (1 + (scrollPos - parkPosition) * 0.0003) +')'); 
+		 } 
 		});
+
+		AOS.init();
 
 });
