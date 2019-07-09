@@ -10,6 +10,14 @@ $(document).ready(function () {
 		},
 	});
 
+	bannerSlider.on('slideChange', function () {
+		console.log('slide changed');
+		AOS.refresh()
+		$('.banner-item__title').removeClass('bounce')
+		$('.swiper-slide-active').children().children().children('.banner-item__content').children('.banner-item__title').addClass('bounce')
+
+	});
+
 	var reviewsSlider = new Swiper('.reviews-slider', {
 		speed: 400,
 		slidesPerView: 3,

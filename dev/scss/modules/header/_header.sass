@@ -1,16 +1,17 @@
 .header
-	position: absolute
+	position: fixed
 	display: flex
 	top: 0
 	left: 0
 	width: 100%
 	align-items: center
+	z-index: 1000
 
 .logo
 	position: relative
 	z-index: 20
 	left: -10px
-	top: -5px
+	top: 0
 	img
 		width: 20vw
 
@@ -18,10 +19,10 @@
 	background-color: #509532
 	text-transform: uppercase
 	position: relative
-	bottom: 26px
 	margin-left: -50px
 	flex: 1 1 100%
 	z-index: 10
+	top: -18px
 	display: flex
 	justify-content: center
 	font-size: .9rem
@@ -30,7 +31,7 @@
 	transition: .3s ease
 	display: inline-block
 	white-space: nowrap
-	padding: .5rem
+	padding: .5rem 1vw
 	&:before
 		content: ''
 		width: 1.5625rem
