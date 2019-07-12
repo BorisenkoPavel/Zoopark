@@ -1,0 +1,52 @@
+.swiper-button-prev, .swiper-button-next
+	background-image: none
+	outline: none
+	svg
+		path
+			fill: #fff
+.swiper-button-prev
+	transform: rotate(180deg)
+	left: 3%
+.swiper-button-next
+	right: 3%
+.swiper-button-prev.reviews-button-prev, .swiper-button-next.reviews-button-next
+	svg
+		path
+			fill: $accent
+.swiper-button-prev.reviews-button-prev
+	left: -5%
+.swiper-button-next.reviews-button-next
+	right: -5%
+
+.swiper-pagination-bullet
+	cursor: pointer
+
+.swiper-pagination.page-pagination
+	bottom: 0
+	top: 0
+	margin: auto
+	width: 100%
+.swiper-button-next.page-button-next,.swiper-button-prev.page-button-prev
+	border-radius: 50%
+	background-color: #f6ffea
+	position: absolute
+	width: 60px
+	height: 60px
+	&:before
+		content: ''
+		width: 30px
+		height: 20px
+		border: 10px solid transparent
+		border-left: 15px solid $accent
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		margin: auto
+.swiper-button-next.page-button-next
+	right: -30px
+	left: auto
+.swiper-button-prev.page-button-prev
+	left: -30px
+	right: auto

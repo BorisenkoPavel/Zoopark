@@ -1,0 +1,35 @@
+extends ../template/main
+
+block variables
+	- var title = 'Контакты'
+	- var pageClass = 'secondary-page'
+block content
+	section.page-contacts
+		.container
+			h1 Наши контакты
+			.row
+				.col-6.pr-5
+					.contacts__photo(style="background-image: url('img/content/video-img.jpg')").h-100
+				.col-6
+					.contacts__title.text-bigger.mb-3: <b>Московский региональный общественный фонд создания, поддержания и развития экологических парков «НАЧИНАНИЕ» (МРОФ «НАЧИНАНИЕ»)</b>
+					.contacts__group
+						div ИНН 7701009269,
+						div КПП 772401001,
+						div ОГРН 1025700001348
+					.contacts__group
+						div тел.: 8-495-771-66-70
+					.contacts__group
+						b Председатель МРОФ «НАЧИНАНИЕ»
+						div Винтер Юлия Владимировна
+					.contacts__group
+						a(href="mailto:ecopark-istra@yandex.ru").nolink: b ecopark-istra@yandex.ru
+						div почта администрации  Экопарка
+					.contacts__group
+						b Заказ экскурсий: 
+						a(href="tel:+74957716670").nolink тел. (495) 771 66 70
+						a(href="tel:+79262941243").nolink или (926) 294 12 43
+					.contacts__group
+						b Расположение:
+						div Московская область, Пятницкое шоссе, 45 км.
+						div от МКАД (между дер. Соколово и Полежайки).
+

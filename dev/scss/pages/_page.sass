@@ -1,0 +1,235 @@
+.secondary-page
+	background-color: #f6ffea
+	padding-top: 120px
+	padding-bottom: 300px
+	.content>section
+		background-color: transparent
+	.content
+		section:last-of-type
+			padding-bottom: 15vh
+	h1, h2, h3, h4, h5, h6
+		margin-bottom: 1em
+		font-weight: bold
+		text-align: normal
+		color: #699a2e
+		text-transform: uppercase
+.text-desc
+	line-height: 1.2
+	font-size: 0.875rem
+.excursion--right-block
+	right: -5px
+	position: relative
+.excursion--left-block
+	position: relative
+	z-index: 50
+.embed-responsive-6by7::before 
+	padding-top: 117%
+.embed-responsive-5by6::before 
+	padding-top: 115%
+.gallery-item__container
+	z-index: 5
+	margin-bottom: .5rem
+	&:hover
+		z-index: 60
+		// .embed-responsive-item.gallery-item__photo
+		// 	left: 5px!important
+		// 	right: 5px!important
+		// 	bottom: 5px!important
+		// 	top: 5px!important
+.gallery-item
+	position: relative
+	.embed-responsive 
+		background-color: #fff
+		transition: .3s ease
+		-webkit-backface-visibility: hidden
+		-moz-backface-visibility: hidden
+		-ms-backface-visibility: hidden
+		.embed-responsive-item.gallery-item
+			&__photo
+				left: 0
+				right: 0
+				bottom: 0
+				top: 0
+				width: auto
+				height: auto
+				display: flex
+	&:hover
+		z-index: 55
+		.embed-responsive
+			transform: scale(1.15)
+.gallery-item__photo-preview
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+.gallery-item__photo-desc
+	position: absolute
+	right: 1.25rem
+	bottom: 0
+	color: #fff
+	text-align: right
+	
+.latter-container
+	position: relative
+	z-index: 50
+.latter
+	transition: .3s ease
+	z-index: 20
+	cursor: pointer
+	transform-origin: left bottom
+	-webkit-backface-visibility: hidden
+	-moz-backface-visibility: hidden
+	-ms-backface-visibility: hidden
+.latter:hover
+	transform: scale(2)
+
+.accent-block__container
+	padding: 5px 15px
+	
+
+
+.meetings
+	$grid-gutter-width: 0px
+
+
+
+.help
+	.text-big
+		font-family: $a-font
+.photo-container
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+.accent-list
+	li
+		margin-bottom: 1rem
+
+
+
+.page-news
+	.accent-block
+		background-color: #d5eac5
+.page-news__container:nth-child(1)
+	.page-news__item
+		.accent-block
+			background-color: #a3ca8e
+.page-news__container:nth-child(2)
+	.page-news__item
+		.accent-block
+			background-color: #b4d5a0
+.page-news__container:nth-child(3)
+	.page-news__item
+		.accent-block
+			background-color: #c4dfb3
+.page-news__container:nth-child(4)
+	.page-news__item
+		.accent-block
+			background-color: #c4dfb3
+.page-news__item
+	max-height: 500px
+	.accent-block
+		height: 100%
+.page-news__photo
+	.accent-block
+		height: 100%
+.page-news__subtitle
+	font-weight: bold
+
+.chrono
+	&__item
+		position: relative
+		&:last-child
+			&:after
+				display: none
+		&:before
+			content: ''
+			position: absolute
+			width: 2px
+			background-color: $accent
+			top: 0
+			bottom: 50%
+			right: calc(105% + 20px)
+		&:after
+			content: ''
+			position: absolute
+			width: 2px
+			background-color: $accent
+			bottom: 0
+			top: 50%
+			right: calc(105% + 20px)
+	&__title
+		font-size: 1.5625rem
+		font-weight: bold
+		font-family: $a-font
+		position: absolute
+		right: 120%
+		top: 50%
+		transform: translatey(-55%)
+		margin: auto
+		width: 185px
+		text-align: right
+	&__text
+		padding-bottom: 1rem
+		&:before
+			content: ''
+			position: absolute
+			width: 40px
+			height: 40px
+			background-color: $accent
+			border-radius: 50%
+			right: 105%
+			top: 0
+			bottom: 1rem
+			margin: auto
+
+.green-section
+	background-color: #d8ecbd
+.tasks
+	text-align: justify
+.task-welcome
+	font-weight: bold
+	text-transform: uppercase
+	padding: 0 1rem
+	text-align: center
+.last-task
+	padding-bottom: 5vh
+
+.supprot
+.quote
+	padding: 2rem 1rem
+	position: relative
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: justify
+	&:before,&:after
+		content: '\201e'
+		position: absolute
+		right: 0
+		font-family: $a-font
+		font-size: 5rem
+		line-height: 1
+		bottom: 1rem
+	&:after
+		content: '\201d'
+		left: 0
+		right: auto
+		top: 1rem
+		bottom: auto
+	&__name
+		text-align: right
+		padding-top: 1rem
+.gallery-item.gallery-item--shadow
+	.embed-responsive
+		transform: none
+	.gallery-item__photo-preview
+		background-color: #f6ffea
+
+.mgu
+	padding-bottom: 15vh
+
+.contacts
+	&__group
+		margin-bottom: 1rem
+.contacts__content
+	padding-left: 5vh

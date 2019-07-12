@@ -1,0 +1,35 @@
+.accent-block
+	background-color: #a8cd94
+	padding: 5vh
+	.accent-block__title
+		@include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font)
+		margin-bottom: .5em
+		text-transform: uppercase
+		font-weight: bold
+		font-family: $a-font
+		color: #464646
+	.accent-block__text
+		font-size: 18px
+		color: #464646
+
+dl.triangle
+	dt
+		font-size: 1.25rem
+		text-transform: uppercase
+		padding-left: 1.7rem
+		@include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font)
+		font-family: $a-font
+		color: $accent
+		margin-bottom: 0.5em
+	dd
+		padding-left: 1.7rem
+		position: relative
+		margin-bottom: 1em
+		&:before
+			content: ''
+			left: 0px
+			position: absolute
+			width: 20px
+			height: 20px
+			border: 10px solid transparent
+			border-left: 15px solid $accent

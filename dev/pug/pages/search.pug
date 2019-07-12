@@ -1,0 +1,68 @@
+extends ../template/main
+
+block variables
+	- var title = 'Как нас найти'
+	- var pageClass = 'secondary-page'
+block content
+	section.page-contacts
+		.container
+			h1 Наши контакты
+			.row
+				.col-6
+					.embed-responsive.embed-responsive-16by9.mb-2
+						.embed-responsive-item: <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A97e8d5b8cb0b99efcc589bffb5e55bb73a77f67d3440e52ae0de47bfde63d86d&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+					.row
+						.col-4.gallery-item__container
+							.gallery-item
+								.embed-responsive.embed-responsive-5by6
+									a(href="img/content/contacts/contacts (5).png" data-toggle="lightbox").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/contacts/contacts (5).png')").w-100.h100
+						.col-4.gallery-item__container
+							.gallery-item
+								.embed-responsive.embed-responsive-5by6
+									a(href="img/content/contacts/contacts (6).png" data-toggle="lightbox").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/contacts/contacts (6).png')").w-100.h100
+						.col-4.gallery-item__container
+							.gallery-item
+								.embed-responsive.embed-responsive-5by6
+									a(href="img/content/contacts/contacts (7).png" data-toggle="lightbox").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/contacts/contacts (7).png')").w-100.h100
+						.col-6.gallery-item__container
+							.gallery-item.gallery-item--shadow
+								.embed-responsive.embed-responsive-21by9
+									a(href="img/content/contacts/contacts (4).png" data-toggle="lightbox").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/contacts/contacts (4).png')").w-100.h100
+						.col-6.gallery-item__container
+							.gallery-item.gallery-item--shadow
+								.embed-responsive.embed-responsive-21by9
+									a(href="img/content/contacts/contacts (1).png" data-toggle="lightbox").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/contacts/contacts (1).png')").w-100.h100
+				.col-6
+					.accent-block.mb-4
+						div Московская обл.,
+						.text-bigger: b Пятницкое Шоссе, <br>45 км от МКАД,
+						.text-desc на 4-ом км.  после дер. Соколово из Москвы 
+					.contacts__content
+						.contacts__block
+							h4.text-left.mb-2 В Экопарк вас доставляют комфортабельные автобусы
+							p Перевозчик имеет Лицензию на осуществление деятельности, по пассажирским перевозкам, в том числе для групп несовершеннолетних.
+						.contacts__block
+							h4.text-left Как доехать на общественном транспорте
+							p От Ленинградского вокзала на электричке <b>до станции Крюково (Зеленоград).</b>
+							p Выход по ходу движения налево к автостанции.
+
+							p <b>Автобус № 497</b> Зеленоград-Солнечногорск. (без пробок 40-45 мин).
+
+							p <b>Остановка «Геофизика».</b><br> Далее прямо по Пятницкому шоссе вперед 300 м. Слева зеленые ворота.
+
+							p Или. <br>	От ст. метро Тушинская до станции <b>Крюково автобус № 400т.</b> Далее так же.
+				.col-6.gallery-item__container
+					.gallery-item.gallery-item--shadow
+						.embed-responsive.embed-responsive-16by9
+							a(href="img/content/contacts/contacts (3).png" data-toggle="lightbox").embed-responsive-item.gallery-item__photo
+								.gallery-item__photo-preview(style="background-image: url('img/content/contacts/contacts (3).png')").w-100.h100
+				.col-6.gallery-item__container
+					.gallery-item.gallery-item--shadow
+						.embed-responsive.embed-responsive-16by9
+							a(href="img/content/contacts/contacts (2).png" data-toggle="lightbox").embed-responsive-item.gallery-item__photo
+								.gallery-item__photo-preview(style="background-image: url('img/content/contacts/contacts (2).png')").w-100.h100
