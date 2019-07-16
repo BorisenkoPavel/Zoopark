@@ -39,6 +39,7 @@
 	white-space: nowrap
 	padding: .5rem 1vw
 	overflow: hidden
+	text-transform: uppercase
 	&:before
 		content: ''
 		width: 1.5625rem
@@ -80,3 +81,57 @@
 		span
 			&:after
 				width: 100%
+.mobile-header
+	background-color: $accent
+	position: absolute
+	left: 100%
+	top: 0
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	background-color: #fff
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
+	background-color: #fff
+.hamburger 
+	display: flex
+	flex-direction: column
+	padding: 10px 15px
+
+.menu.is-active
+	transform: translatex(0)
+	box-shadow: 0 0 15px 5px rgba(0,0,0, .4)
+.menu
+	background-color: $accent
+	display: flex
+	width: 75%
+	position: relative
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	z-index: 800
+	flex-direction: column
+	transform: translatex(-100%)
+	transition: .3s ease
+	.nav-link
+		white-space: normal
+		position: relative
+		padding-left: 30px
+		&:before
+			position: absolute
+			left: 0
+	li
+		&:nth-child(2)
+			a:before
+				background-image: url(../img/general/nav-icon1.png)
+		&:nth-child(3)
+			a:before
+				background-image: url(../img/general/nav-icon2.png)
+		&:nth-child(4)
+			a:before
+				background-image: url(../img/general/nav-icon3.png)
+		&:nth-child(5)
+			a:before
+				background-image: url(../img/general/nav-icon4.png)
+	.logo
+		max-width: 100%
+		img
+			max-width: 100%

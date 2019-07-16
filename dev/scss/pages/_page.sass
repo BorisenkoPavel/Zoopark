@@ -16,30 +16,34 @@
 .text-desc
 	line-height: 1.2
 	font-size: 0.875rem
-.excursion--right-block
-	right: -5px
-	position: relative
 .excursion--left-block
 	position: relative
 	z-index: 50
+.embed-responsive-29by11::before
+	padding-top: 36.5%
 .embed-responsive-6by7::before 
-	padding-top: 117%
+	padding-top: 112.5%
 .embed-responsive-5by6::before 
 	padding-top: 115%
+.gallery-item__photo
+	display: block
+	background-color: #f6ffea
+	border: none
 .gallery-item__container
 	z-index: 5
-	margin-bottom: .5rem
 	&:hover
 		z-index: 60
 		// .embed-responsive-item.gallery-item__photo
 		// 	left: 5px!important
 		// 	right: 5px!important
-		// 	bottom: 5px!important
+		// 	bottom: 4px!important
 		// 	top: 5px!important
+		.gallery-item__photo
+			padding: 2px 3px 2px 2px
+			border: none
 .gallery-item
 	position: relative
 	.embed-responsive 
-		background-color: #fff
 		transition: .3s ease
 		-webkit-backface-visibility: hidden
 		-moz-backface-visibility: hidden
@@ -48,7 +52,7 @@
 			&__photo
 				left: 0
 				right: 0
-				bottom: 0
+				bottom: .5rem
 				top: 0
 				width: auto
 				height: auto
@@ -56,7 +60,7 @@
 	&:hover
 		z-index: 55
 		.embed-responsive
-			transform: scale(1.15)
+			transform: scale(1.2)
 .gallery-item__photo-preview
 		background-size: cover
 		background-repeat: no-repeat
@@ -103,7 +107,13 @@
 	li
 		margin-bottom: 1rem
 
-
+.accent-block
+	&__title2
+		font-family: $a-font
+		font-size: 1.5rem
+		font-weight: bold
+	&__subtitle2
+		font-size: 1.15rem
 
 .page-news
 	.accent-block
@@ -225,11 +235,90 @@
 	.gallery-item__photo-preview
 		background-color: #f6ffea
 
-.mgu
-	padding-bottom: 15vh
-
 .contacts
 	&__group
 		margin-bottom: 1rem
 .contacts__content
 	padding-left: 5vh
+
+.form-title
+	font-weight: bold
+	text-transform: uppercase
+	font-size: 1.35rem
+	font-family: $a-font
+	&__subtitle
+		font-size: 1rem
+.blank-photo
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+.blank-right-block
+	.accent-block
+		display: flex
+		justify-content: center
+		padding: 7rem 0
+.blank-right-block__phone, .blank-right-block__mail
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		width: 40px
+		height: 40px
+		left: -55px
+		top: 0
+		bottom: 0
+		margin: auto
+.blank-right-block__phone
+	&:before
+		background-image: url(../img/general/blank-phone.png)
+.blank-right-block__mail
+	&:before
+		background-image: url(../img/general/blank-mail.png)
+
+.blank-form
+	border-radius: 2.1875rem 0 2.1875rem 0
+	background-color: #a8cd93
+	padding: 2rem
+	input
+		border-radius: 5px
+		border: none
+		height: 30px
+		padding: 0 10px
+.input-container.input-container--date
+	input
+		max-width: 15%
+.input-container.input-container--column
+	flex-direction: column
+	input
+		flex: 0 0 30px
+		height: 30px
+		max-width: 100%
+.input-container
+	display: flex
+	margin-bottom: 1rem
+	justify-content: space-between
+	input
+		max-width: 60%
+		flex: 1 1 100%
+	label
+		flex: 0 0 auto
+		padding-right: 15px
+.mgu-aside
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.embed-responsive-custom--long
+	&:before
+		padding-top: 150%
+.embed-responsive-custom--wide
+	&:before
+		padding-top: 37%
+
+.accent-block.accent-block-justify
+	flex-direction: column
+	display: flex
+	justify-content: center

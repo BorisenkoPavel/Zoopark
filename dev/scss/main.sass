@@ -141,6 +141,8 @@ button
 		background-color: #fff
 .sections-wrapper
 	overflow: hidden
+	// &>section
+	// 	z-index: 50
 .bg-green
 	position: fixed
 	height: 100%
@@ -179,6 +181,7 @@ button
 			animation-fill-mode: both
 			animation-delay: 1s
 			animation-name: customRight
+	
 		p.customRight 
 			animation-duration: 1s
 			animation-fill-mode: both
@@ -205,12 +208,16 @@ button
 		font-family: $a-font
 		font-weight: bold
 		transition: .4s
+		img
+			min-width: 30px
+			width: 7vw
+			max-width: 100px
 	&__title--small
 		font-size: 3rem
 	&__content
 		position: relative
 		z-index: 100
-		padding: 0 10vw 12vh
+		padding: 0 10vw 7%
 		display: flex
 		flex-direction: column
 		justify-content: flex-end
@@ -256,6 +263,8 @@ button
 .swiper-pagination-bullet.swiper-pagination-bullet-active
 	background-color: $accent
 	border: 3px solid #ffffff
+.swiper-pagination
+	display: flex
 .swiper-pagination-bullet
 	width: 11px
 	height: 11px
@@ -265,7 +274,8 @@ button
 	opacity: 1
 	margin-right: 14px
 	transition: .3s ease
-	
+	&:last-child
+		margin-right: 0
 
 .card-container
 	padding: 15px
@@ -511,7 +521,16 @@ section.section-news
 	flex: 100%!important
 	margin-left: 0
 	margin-right: 0
-
+.ekko-lightbox-nav-overlay
+	a
+		&:hover
+			text-decoration: none
+		span
+			font-size: 2.625rem
+			color: #fff
+.modal-open
+	.nav
+		padding-right: 17px!important
 @import pages/page
 @import modules/modules
 @import media

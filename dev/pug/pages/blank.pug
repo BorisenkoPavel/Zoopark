@@ -4,9 +4,50 @@ block variables
 	- var title = 'Заявка'
 	- var pageClass = 'secondary-page'
 block content
-	section.page-contacts
+	section.blank
 		.container
 			h1 Коллектив Экопарка всегда рад гостям
+			.row.mb-3
+				.col-6.d-none.d-lg-block
+					.blank-photo(style="background-image: url('img/content/blank-photo.jpg')").h-100
+				.col-12.col-lg-6.blank-right-block
+					.accent-block.text-bigger
+						.blank-right-block__content
+							p.form-title Заказ экскурсий
+							p.blank-right-block__phone:  b тел.: <a href="+74957716670" class="nolink">(495) 771 66 70</a> <br> или  <a class="nolink" href="tel:+79262941243">(926) 294 12 43</a>
+							a(href="mailto:ecopark-istra@yandex.ru").blank-right-block__mail.nolink: b ecopark-istra@yandex.ru
 			.row
-				.col-6
-					.bg
+				.col-12.col-xl-8.offset-xl-2
+					form.blank-form
+						.form-title.text-center.mb-4 Анкета-заявка <div class="form-title__subtitle">ВСЕ ПОЛЯ ОБЯЗАТЕЛЬНЫ ДЛЯ ЗАПОЛНЕНИЯ!</div>
+						.input-container
+							label(for="input1") 1.	Имя Фамилия заявителя
+							input(type="text" id="input1")
+						.input-container
+							label(for="input2") 2.	Кого представляете 
+							input(type="text" id="input2")
+						.input-container
+							label(for="input3") 3.	Контактный телефон
+							input(type="text" id="input3")
+						.input-container
+							label(for="input4") 4. E-mail
+							input(type="text" id="input4")
+						.input-container.input-container--column
+							label(for="input5") 5. Откуда узнали про наши экскурсии?
+							input(type="text" id="input5")
+						.input-container.input-container--column
+							label(for="input6") 6. Желаемая тема экскурсии (возможна комплексная экскурсия).
+							input(type="text" id="input6")
+						.input-container.input-container--date
+							label(for="input7") 7. Желаемая Дата Экскурсии
+							input(type="date" id="input7")
+							label(for="input8") 8. Количество человек
+							input(type="text" id="input8")
+						.input-container
+							label(for="input9") 9. От какого места поедет ваша группа?
+							input(type="text" id="input9")
+						.input-container
+							label(for="input10") 10. Хотите добавить комментарии
+							input(type="text" id="input10")
+						div.text-right
+							button.form-btn(type='submit') Отправить

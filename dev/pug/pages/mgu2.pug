@@ -1,0 +1,103 @@
+extends ../template/main
+
+block variables
+	- var title = 'МГУ'
+	- var pageClass = 'secondary-page'
+block content
+	section.mgu2
+		.container
+			h1 Биофак МГУ-соисполнители проекта
+			.row.mb-2
+				.col-6
+					.gallery-item.h-100
+						.embed-responsive.h-100
+							a(href="img/content/mgu/mgu.jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").gallery-item__photo.h-100
+								.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu.jpg')").w-100.h-100
+				.col-6
+					.accent-block
+						p Между МГУ  и Фондом «Начинание» заключен договор № 1-14/18 на срок 5 лет на выполнение научно-исследовательских работ. В работах участвуют сотрудники  и выпускники Биологического факультета.
+						.row
+							.col-6.gallery-item__container
+								.gallery-item
+									.embed-responsive.embed-responsive-3by4
+										a(href="img/content/mgu/mgu-doc.jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+											.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu-doc.jpg')").w-100
+								
+							.col-6.gallery-item__container
+								.gallery-item
+									.embed-responsive.embed-responsive-3by4
+										a(href="img/content/img-nat2.jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+											.gallery-item__photo-preview(style="background-image: url('img/content/img-nat2.jpg')").w-100
+
+			.row
+				.col-8
+					.row
+						.col-12.gallery-item__container.mb-3
+							.gallery-item
+								.embed-responsive.embed-responsive-21by9
+									a(href="img/content/mgu/mgu(8).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(8).jpg')").w-100
+								.py-2.text-desc.text-left.px-3 
+									div <b>Павлов С.Д.</b> – руководитель работ, доцент кафедры ихтиологии, кандидат биологических наук.
+									div <b>Ефимовский С.В.</b> – заместитель декана Биофка МГУ, координатор работ.
+									div <b>Олейниченко В.Ю.</b> - старший научный сотрудник кафедры зоологии позвоночных, кандидат биологических наук.
+						.col-6.gallery-item__container
+							.gallery-item
+								.embed-responsive.embed-responsive-16by9
+									a(href="img/content/mgu/mgu(6).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(6).jpg')").w-100
+						.col-6.gallery-item__container
+							.gallery-item
+								.embed-responsive.embed-responsive-16by9
+									a(href="img/content/mgu/mgu(7).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(7).jpg')").w-100
+						.col-6.gallery-item__container
+							.gallery-item
+								.embed-responsive.embed-responsive-16by9
+									a(href="img/content/mgu/mgu(13).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(13).jpg')").w-100
+						.col-6.gallery-item__container
+							.gallery-item
+								.embed-responsive.embed-responsive-16by9
+									a(href="img/content/mgu/mgu(5).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(5).jpg')").w-100
+						.col-6.gallery-item__container
+							.gallery-item.mb-2
+								.embed-responsive.embed-responsive-16by9
+									a(href="img/content/mgu/mgu(4).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(4).jpg')").w-100
+							.gallery-item
+								.embed-responsive.embed-responsive-16by9
+									a(href="img/content/mgu/mgu(3).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+										.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(3).jpg')").w-100
+						.col-6.gallery-item__container
+							.gallery-item.h-100
+								.embed-responsive.h-100
+									a(href="img/content/mgu/mgu(12).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").gallery-item__photo.h-100.w-100
+										.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(12).jpg')").w-100.h-100
+				.col-4.pt-5.mgu-aside.pb-2
+					.gallery-item
+						.embed-responsive.embed-responsive-1by1.w-50.mx-auto.mb-3
+							a(href="img/content/mgu/mgu(10).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+								.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(10).jpg')").w-100
+						.text-desc.text-left.px-3.py-2.text-center
+							p: b Михаил Петрович Кирпичников
+							div Декан Биофака МГУ, 
+							div Председатель Ученого Совета
+							div Доктор биологических наук (1987), академик Российской академии наук (1997), профессор
+					.gallery-item
+						.embed-responsive.embed-responsive-1by1.w-50.mx-auto.mb-3
+							a(href="img/content/mgu/mgu(2).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+								.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(2).jpg')").w-100
+						.text-desc.text-left.px-3.py-2.text-center
+							p: b Вислобоков Н.А.
+							div Научный сотрудник кафедры высших растений, кандидат биологических наук.
+					.gallery-item
+						.embed-responsive.embed-responsive-1by1.w-50.mx-auto.mb-3
+							a(href="img/content/mgu/mgu(9).jpg" data-toggle="lightbox" data-gallery="ex-gallery" data-title="item 1").embed-responsive-item.gallery-item__photo
+								.gallery-item__photo-preview(style="background-image: url('img/content/mgu/mgu(9).jpg')").w-100
+						.text-desc.text-left.px-3.py-2.text-center
+							p: b Бёме Ирина Рюриковна
+							p Руководитель работ по орнитологии
+							div МГУ имени М.В. Ломоносова, Биологический факультет, Кафедра зоологии позвоночных, доктор биологических наук профессор
+					.accent-block Ученые и преподаватели МГУ им. Ломоносова и сотрудники Фонда «Начинание» проводят познавательные экскурсии и ведут научную работу по изучению  и восстановлению биоты Подмосковья.

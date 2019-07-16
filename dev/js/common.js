@@ -34,6 +34,23 @@ $(document).ready(function () {
 			},
 	});
 
+	var gallerySlider = new Swiper('.gallery-slider', {
+		speed: 400,
+		slidesPerView: 3,
+		spaceBetween: 10,
+			navigation: {
+				nextEl: '.swiper-button-next.gallery-button-next',
+				prevEl: '.swiper-button-prev.gallery-button-prev',
+			},
+			breakpoints: {
+				992: {
+					slidesPerView: 2,
+				},
+				576: {
+					slidesPerView: 1,
+				}
+			},
+	});
 	var pageSlider = new Swiper('.page-slider', {
 		speed: 400,
 			navigation: {
@@ -51,7 +68,24 @@ $(document).ready(function () {
 			nextEl: '.swiper-button-next.reviews-button-next',
 			prevEl: '.swiper-button-prev.reviews-button-prev',
 		},
+		breakpoints: {
+			992: {
+				navigation: false,
+				slidesPerView: 2,
+			},
+			// when window width is <= 640px
+			576: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			}
+		}
 	});
+
+	$('.hamburger--squeeze').on('click', function(){
+
+		$(this).toggleClass('is-active')
+		$('.menu').toggleClass('is-active')
+	})
 
 	// $(window).scroll(function () {
 	// 	var movement = -parseInt($(this).scrollTop() / 2.35);

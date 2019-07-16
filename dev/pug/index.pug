@@ -5,6 +5,22 @@ block variables
 	- var pageClass = 'index-page'
 block content
 
+	.menu.pb-4
+		.mobile-header.d-lg-none.text-white
+			.hamburger.hamburger--squeeze
+				span.hamburger-box
+				span.hamburger-inner
+				span.hamburger-box
+	
+		a(href="/").logo.d-block.d-lg-none.position-static.mb-4
+			img(src="../img/general/logo.png", alt="")
+		ul.pl-4
+			li: a.nav-link.active(href='#'): span ШКОЛЬНИКАМ
+			li: a.nav-link(href='#'): span ЭКОПАРК
+			li: a.nav-link(href='#'): span ДЕЯТЕЛЬНОСТЬ ФОНДА
+			li: a.nav-link(href='#'): span ВОССТАНОВЛЕНИЕ ПРИРОДЫ
+			li: a.nav-link(href='#'): span контакты
+			
 	section.section-banner
 		.swiper-container.banner-slider
 			.swiper-wrapper
@@ -61,8 +77,9 @@ block content
 				.swiper-pagination.swiper-pagination--banner
 			.swiper-button-prev.banner-button-prev: <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40.02px" height="40.02px" viewBox="0 0 612.02 612.02" style="enable-background:new 0 0 612.02 612.02;" xml:space="preserve"><g><g id="_x35__11_"><g><path d="M596.96,269.674L342.381,15.094c-20.079-20.079-52.644-20.079-72.723,0c-20.079,20.079-20.079,52.644,0,72.723L487.852,306.01L269.658,524.202c-20.079,20.079-20.079,52.644,0,72.723s52.644,20.079,72.723,0L596.96,342.346C617.039,322.317,617.039,289.753,596.96,269.674z M290.858,254.258L88.744,41.238c-20.309-21.378-53.204-21.378-73.513,0s-20.309,56.058,0,77.462l165.371,174.289L15.231,467.278c-20.309,21.379-20.309,56.083,0,77.462s53.204,21.379,73.513,0L290.858,331.72C311.167,310.342,311.167,275.662,290.858,254.258z"/></g></g></g></svg>
 			.swiper-button-next.banner-button-next: <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40.02px" height="40.02px" viewBox="0 0 612.02 612.02" style="enable-background:new 0 0 612.02 612.02;" xml:space="preserve"><g><g id="_x35__11_"><g><path d="M596.96,269.674L342.381,15.094c-20.079-20.079-52.644-20.079-72.723,0c-20.079,20.079-20.079,52.644,0,72.723L487.852,306.01L269.658,524.202c-20.079,20.079-20.079,52.644,0,72.723s52.644,20.079,72.723,0L596.96,342.346C617.039,322.317,617.039,289.753,596.96,269.674z M290.858,254.258L88.744,41.238c-20.309-21.378-53.204-21.378-73.513,0s-20.309,56.058,0,77.462l165.371,174.289L15.231,467.278c-20.309,21.379-20.309,56.083,0,77.462s53.204,21.379,73.513,0L290.858,331.72C311.167,310.342,311.167,275.662,290.858,254.258z"/></g></g></g></svg>
+
 	.sections-wrapper
-		section.section-job.green-section
+		section.section-job
 			.container
 				h1 Просветительская работа
 				.row.card-list
@@ -87,7 +104,7 @@ block content
 								.embed-responsive-item.card-photo(style="background-image: url('img/content/img4.jpg')")
 							.card-title полевые работы студентов биофака
 
-		section.section-about-us.green-section
+		section.section-about-us
 			.container
 				h1 Об Экопарке Фонда «Начинание»
 				.row.card-list.card-list--begin
@@ -124,7 +141,7 @@ block content
 								.embed-responsive-item.card-photo(style="background-image: url('img/content/img-us2.jpg')")
 							.card-title Галерея
 
-		section.section-job.green-section
+		section
 			.container
 				h1 Сохраним природу
 				.row.card-list.card-list--nature
@@ -149,6 +166,7 @@ block content
 								.embed-responsive-item.card-photo(style="background-image: url('img/content/img-nat1.jpg')")
 							.card-title Хочу помочь
 		.bg-green
+
 	section.section-news
 		.container
 			.news-form-container.d-flex
@@ -192,7 +210,7 @@ block content
 
 							.review-item__text.mb-3 ГБОУ Школа № 1568 благодарит организаторов парка «начинание» за прекрасную инициативу. Ежедневно школьники видят и слышат примеры негативного влияния человека на природу, а попав в экопарк «Начинание» сталкиваются с совершенно другими отношениями человека к природе. <br>Любовь к природе и бережное отношение к ней, необходимость биологического знания и умение его применять – это те ценности, которые уносят ребята с собой после посещения парка. Огромное спасибо преподавателям и сотрудникам Биологического факультета МГУ за удивительно интересные экскурсии.
 							.review-item__author.text-accent.text-right <i>Учитель биологии <br> О.А. Дмитриева</i>
-					.swiper-slide
+					.swiper-slide.swiper-slide--button
 						.review-item
 							.embed-responsive.embed-responsive-1by1.mb-5
 								.embed-responsive-item.review-item__photo
@@ -214,7 +232,7 @@ block content
 
 							.review-item__text.mb-3 ГБОУ Школа № 1568 благодарит организаторов парка «начинание» за прекрасную инициативу. Ежедневно школьники видят и слышат примеры негативного влияния человека на природу, а попав в экопарк «Начинание» сталкиваются с совершенно другими отношениями человека к природе. <br>Любовь к природе и бережное отношение к ней, необходимость биологического знания и умение его применять – это те ценности, которые уносят ребята с собой после посещения парка. Огромное спасибо преподавателям и сотрудникам Биологического факультета МГУ за удивительно интересные экскурсии.
 							.review-item__author.text-accent.text-right <i>Учитель биологии <br> О.А. Дмитриева</i>
-					.swiper-slide
+					.swiper-slide.swiper-slide--button
 						.review-item
 							.embed-responsive.embed-responsive-1by1.mb-5
 								.embed-responsive-item.review-item__photo
