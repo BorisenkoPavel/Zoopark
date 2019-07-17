@@ -35,6 +35,25 @@
 			font-size: 1.3
 		&__content
 			padding-bottom: 10%
+	.mgu-aside
+		flex-direction: row
+		flex-wrap: wrap
+		padding: 0!important
+		.gallery-item
+			flex: 0 0 50%
+			margin: 0 auto 1.5rem
+			order: 1
+		.accent-block
+			align-items: center
+			margin-bottom: .5rem
+	.contacts__content
+		padding-left: 0
+	.quote:after
+		top: 10%
+	.quote:before
+		bottom: 10%
+	.quote
+		padding: 4rem 1rem
 // ≥992px
 +media-breakpoint-down(md)
 	.secondary-page
@@ -63,6 +82,14 @@
 		width: 100%!important
 	.theme-lesson
 		padding: 0 1.5rem
+	.gallery-item__main-photo--lg
+		min-height: 300px
+	.chrono__title
+		max-width: 16.66667%
+	.support-item
+		margin-bottom: 1.5rem!important
+	.swiper-slide--button
+		display: none!important
 // ≥768px
 +media-breakpoint-down(sm)
 	section
@@ -80,6 +107,9 @@
 			display: inline-block
 			width: 100%
 			flex: 0 0 30px
+	.mgu-aside
+		.gallery-item
+			flex: 0 0 100%
 // ≥576px
 +media-breakpoint-down(xs)
 	.accent-block 
@@ -121,6 +151,17 @@
 	.form-news
 		img
 			display: none
+	.chrono__item
+		&:before, &:after
+			display: none
+	.chrono__title
+		right: 115%
+		font-size: 1.2rem
+	.chrono__text
+		&:before
+			display: none
+	.task-welcome
+		padding: 0
 /*==========  mobile First  ==========*/
 
 // ≤576px
