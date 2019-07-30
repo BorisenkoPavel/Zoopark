@@ -158,9 +158,9 @@ gulp.task('img:build', () => {
 
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('styles', 'scripts', 'fonts', 'pug','svg', 'img:build')
+  gulp.parallel('styles', 'scripts', 'fonts', 'pug','svg')
 ));
-
+// , 'img:build'
 if (gulpversion == 3) {
   gulp.task('watch', ['styles', 'scripts', 'browser-sync'], function() {
     gulp.watch('app/scss/**/*.'+syntax+'', ['styles']);

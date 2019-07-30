@@ -102,6 +102,15 @@ $(document).ready(function () {
 		// $('.park-section-bg').css('transform', 'scale(' + (1 + (scrollPos - parkPosition) * 0.0003) +')'); 
 		//  } 
 		// });
+		$( window ).resize(function() {
+			if ($(window).width()>992) {
+				$('.hamburger--squeeze').removeClass('is-active')
+				$('.menu').removeClass('is-active')
+			}
+		});
 
-
+		$('.menu__nav').children('li').children('.nav-link').on('click', function(event) {
+			event.preventDefault()
+			$(this).siblings('.nav__sub-menu').slideToggle()
+		})
 });

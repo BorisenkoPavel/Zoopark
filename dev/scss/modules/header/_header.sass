@@ -7,6 +7,8 @@
 	align-items: center
 	z-index: 1000
 	padding-top: 50px
+	.nav
+		flex-wrap: nowrap
 .logo.hidden
 	transform: scale(0)
 .logo
@@ -32,6 +34,23 @@
 	top: 0
 	flex: 1 1 100%
 	padding-left: 280px
+	li:hover
+		background-color: $accent
+		.nav__sub-menu
+			display: block
+	li:nth-child(2)
+		.nav-link:before
+			background-image: url(../img/general/nav-icon1.png)
+	li:nth-child(3)
+		.nav-link:before
+			background-image: url(../img/general/nav-icon2.png)
+	li:nth-child(4)
+		.nav-link:before
+			background-image: url(../img/general/nav-icon3.png)
+	li:nth-child(5)
+		.nav-link:before
+			background-image: url(../img/general/nav-icon4.png)
+
 .nav-link
 	color: #fff
 	transition: .3s ease
@@ -51,18 +70,6 @@
 		display: inline-block
 		vertical-align: text-bottom
 		margin-right: 10px
-	&:nth-child(2)
-		&:before
-			background-image: url(../img/general/nav-icon1.png)
-	&:nth-child(3)
-		&:before
-			background-image: url(../img/general/nav-icon2.png)
-	&:nth-child(4)
-		&:before
-			background-image: url(../img/general/nav-icon3.png)
-	&:nth-child(5)
-		&:before
-			background-image: url(../img/general/nav-icon4.png)
 	span
 		position: relative
 		&:after
@@ -81,11 +88,20 @@
 		span
 			&:after
 				width: 100%
-.mobile-header
-	background-color: $accent
+
+
+.nav__sub-menu
 	position: absolute
-	left: 100%
-	top: 0
+	font-size: .85rem
+	top: 100%
+	background-color: $accent
+	display: none
+	padding: .5rem 1rem
+	li
+		.nav-link:before
+			display: none
+
+
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
 	background-color: #fff
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
@@ -94,23 +110,28 @@
 	display: flex
 	flex-direction: column
 	padding: 10px 15px
-
+.mobile-header
+	background-color: $accent
+	position: absolute
+	left: 100%
+	top: 0
+	width: 100vw
 .menu.is-active
 	transform: translatex(0)
 	box-shadow: 0 0 15px 5px rgba(0,0,0, .4)
+
 .menu
 	background-color: $accent
-	display: flex
-	width: 75%
-	position: relative
+	display: inline-block
 	position: fixed
-	top: 0
-	left: 0
-	bottom: 0
-	z-index: 800
+	padding-right: 1rem
 	flex-direction: column
-	transform: translatex(-100%)
 	transition: .3s ease
+	transform: translatex(-100%)
+	z-index: 800
+	.nav__sub-menu
+		position: relative
+		// display: block
 	.nav-link
 		white-space: normal
 		position: relative
@@ -135,3 +156,7 @@
 		max-width: 100%
 		img
 			max-width: 100%
+
+.mobile-menu__content
+	height: 100vh
+	overflow-y: auto

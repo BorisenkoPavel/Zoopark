@@ -1,10 +1,22 @@
 header.header
 	a(href="/").logo
 		img(src="../img/general/logo.png", alt="")
-	.nav
-		a.nav-link.active(href='#'): span ШКОЛЬНИКАМ
-		a.nav-link(href='#'): span ЭКОПАРК
-		a.nav-link(href='#'): span ДЕЯТЕЛЬНОСТЬ ФОНДА
-		a.nav-link(href='#'): span ВОССТАНОВЛЕНИЕ ПРИРОДЫ
-		a.nav-link(href='#'): span контакты
+	ul.nav
+		li
+			a.nav-link.active(href='#'): span ШКОЛЬНИКАМ
+			ul.nav__sub-menu
+				li: a(href="").nav-link: span ШКОЛЬНИКАМ
+				li: a(href="").nav-link: span ВОССТАНОВЛЕНИЕ ПРИРОДЫ
+				li: a(href="").nav-link: span ДЕЯТЕЛЬНОСТЬ ФОНДА
+				li: a(href="").nav-link: span ШКОЛЬНИКАМ
+		li
+			a.nav-link(href='#'): span ЭКОПАРК
+			ul.nav__sub-menu
+				li: a(href="").nav-link: span ШКОЛЬНИКАМ
+				li: a(href="").nav-link: span ШКОЛЬНИКАМ
+				li: a(href="").nav-link: span ШКОЛЬНИКАМ
+				li: a(href="").nav-link: span ШКОЛЬНИКАМ
+		li: a.nav-link(href='#'): span ДЕЯТЕЛЬНОСТЬ ФОНДА
+		li: a.nav-link(href='#'): span ВОССТАНОВЛЕНИЕ ПРИРОДЫ
+		li: a.nav-link(href='#'): span контакты
 
