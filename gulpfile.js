@@ -17,9 +17,9 @@ var gulp                    = require('gulp'),
     svgmin                  = require('gulp-svgmin'),
     cheerio                 = require('gulp-cheerio'),
     replace                 = require('gulp-replace'),
-    imagemin                = require('gulp-imagemin'),
-    imageminJpegRecompress  = require('imagemin-jpeg-recompress'),
-    pngquant                = require('imagemin-pngquant'),
+    // imagemin                = require('gulp-imagemin'),
+    // imageminJpegRecompress  = require('imagemin-jpeg-recompress'),
+    // pngquant                = require('imagemin-pngquant'),
     cache                   = require('gulp-cache'),
     imgPATH                 = {
                               "input": ["dev/img/**/*.{png,jpg,gif,svg}",
@@ -30,11 +30,11 @@ var gulp                    = require('gulp'),
                                 "input": "dev/img/svg/*.svg",
                                 "output": "app/img/svg/"
 															};
-const del                   = require('del');
+// const del                   = require('del');
 
-gulp.task('clean', function(){
-  return del('app/**', {force:true});
-});
+// gulp.task('clean', function(){
+//   return del('app/**', {force:true});
+// });
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -136,30 +136,30 @@ gulp.task('img:dev', () => {
   return gulp.src(imgPATH.input).pipe(gulp.dest(imgPATH.ouput));
 });
 
-gulp.task('img:build', () => {
-  return gulp.src(imgPATH.input)
-      .pipe(cache(imagemin([
-          imagemin.gifsicle({interlaced: true}),
-          imagemin.jpegtran({progressive: true}),
-          imageminJpegRecompress({
-              loops: 5,
-              min: 70,
-              max: 75,
-              quality: 'medium'
-          }),
-          imagemin.svgo(),
-          imagemin.optipng({optimizationLevel: 3}),
-          pngquant({quality: '65-70', speed: 5})
-      ], {
-          verbose: true
-      })))
-      .pipe(gulp.dest(imgPATH.ouput));
-});
+// gulp.task('img:build', () => {
+//   return gulp.src(imgPATH.input)
+//       .pipe(cache(imagemin([
+//           imagemin.gifsicle({interlaced: true}),
+//           imagemin.jpegtran({progressive: true}),
+//           imageminJpegRecompress({
+//               loops: 5,
+//               min: 70,
+//               max: 75,
+//               quality: 'medium'
+//           }),
+//           imagemin.svgo(),
+//           // imagemin.optipng({optimizationLevel: 3}),
+//           // pngquant({quality: '65-70', speed: 5})
+//       ], {
+//           verbose: true
+//       })))
+//       .pipe(gulp.dest(imgPATH.ouput));
+// });
 
-gulp.task('build', gulp.series(
-  'clean',
-  gulp.parallel('styles', 'scripts', 'fonts', 'pug','svg')
-));
+// gulp.task('build', gulp.series(
+//   'clean',
+//   gulp.parallel('styles', 'scripts', 'fonts', 'pug','svg')
+// ));
 // , 'img:build'
 if (gulpversion == 3) {
   gulp.task('watch', ['styles', 'scripts', 'browser-sync'], function() {

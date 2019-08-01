@@ -1,21 +1,48 @@
 extends ../template/main
 
 block variables
-	- var title = 'Новости'
+	- var title = 'История Экопарка'
 	- var pageClass = 'secondary-page'
 block content
-	section.chrono
+	section.chrono-page
 		.container
+			h2 История Экопарка
 			.row
-				.col-9.offset-3.col-lg-7.offset-lg-4
-					h3.text-dark Хронология создания Экопарка
-					.chrono__item
-						.chrono__title Проект 2019-2020
-						.chrono__text На территории Фонда «НАЧИНАНИЕ» в 2019/20 гг  запущен проект реабилитационного лагеря на 25-30 человек для детей инвалидов, воспитанников детских домов и интернатов. В настоящее время ведутся проектные работы и строительство.
-					.chrono__item
-						.chrono__title Май 2018
-						.chrono__text На базе созданного Экопарка начал функционировать всесезонный экологический лагерь для школьников с познавательным уклоном.  Лагерь сформирован в форме экологической базы. Дневное пребывание детей в лагере полностью финансируется из средств Фонда.
-					.chrono__item
-						.chrono__title Апрель 2013
-						.chrono__text Фонд «НАЧИНАНИЕ» на арендованном лесном участке начал реализацию программы по лесовостановлению после экокатастроф.  Эти работы проводились совместно с учёными биологами в рамках договора, заключённого Фондом  с Биофаком МГУ им. М. В. Ломоносова.
-
+				.d-none.d-md-block.col-md-6.chrono-photo__container
+					.chrono-photo.h-100(style="background-image: url('img/content/ex (1).jpg')")
+				.col-9.offset-3.col-sm-10.offset-sm-2.offset-md-0.col-md-6.chrono__item
+					.chrono__text <b>Год 2013 г.</b> Как у любого серьезного, перспективного проекта у нашего Экопарка есть своя история, которая началась еще в 2013 году. Тогда Экопарк был местом возрождения леса после экологического бедствия: жук-типограф истребил большую часть хвойных деревьев
+				.d-none.d-md-block.col-md-6.chrono-photo__container
+					.chrono-photo.h-100(style="background-image: url('img/content/ex (1).jpg')")
+				.col-9.offset-3.col-sm-10.offset-sm-2.offset-md-0.col-md-6.chrono__item
+					.chrono__text <b>В октябре 2015 года</b> на территории леса Экопарка после расчистки от пораженных короедом деревьев началось лесовосстановление. Сотрудники Экопарка совместно с учеными из МГУ занимались посадками молодых деревьев, восстановлением естественного ландшафта, очисткой прибрежных зон. Был создан собственный питомник для выращивания саженцев сосен, дубов, кленов для последующей пересадки в естественный ландшафт.
+				.d-none.d-md-block.col-md-6.chrono-photo__container
+					.chrono-photo.h-100(style="background-image: url('img/content/ex (1).jpg')")
+				.col-9.offset-3.col-sm-10.offset-sm-2.offset-md-0.col-md-6.chrono__item
+					.chrono__text <b>В ноябре 2015 года</b> ученые биологического факультета МГУ им М.В. Ломоносова выпустили первый отчет с рекомендациями по методам лесовосстановления на территории Экопарка.
+				.d-none.d-md-block.col-md-6.chrono-photo__container
+					.chrono-photo.h-100(style="background-image: url('img/content/ex (1).jpg')")
+				.col-9.offset-3.col-sm-10.offset-sm-2.offset-md-0.col-md-6.chrono__item
+					.chrono__text Позднее, <b>в апреле 2018 года</b>, на территории Экопарка была построена Школа Юннатов на базе биостанции МГУ. Открылся экологический лагерь для детей, финансируемый из средств Фонда «Начинание». 
+				.d-none.d-md-block.col-md-6.chrono-photo__container
+					.chrono-photo.h-100(style="background-image: url('img/content/ex (1).jpg')")
+				.col-9.offset-3.col-sm-10.offset-sm-2.offset-md-0.col-md-6.chrono__item
+					.chrono__text <b>В мае 2018 года </b>была проведена первая познавательная экскурсия для школьников 6 класса из школы № 1568. 
+				.d-none.d-md-block.col-md-6.chrono-photo__container
+					.chrono-photo.h-100(style="background-image: url('img/content/ex (1).jpg')")
+				.col-9.offset-3.col-sm-10.offset-sm-2.offset-md-0.col-md-6.chrono__item
+					.chrono__text <b>В июле 2018 года</b> на летнюю практику в Экопарк прибыла первая группа студентов-ихтиологов первого курса Биофака МГУ.
+				.d-none.d-md-block.col-md-6.chrono-photo__container
+					.chrono-photo.h-100(style="background-image: url('img/content/ex (1).jpg')")
+				.col-9.offset-3.col-sm-10.offset-sm-2.offset-md-0.col-md-6.chrono__item
+					.chrono__text <b>В августе 2018 года</b> была оборудована и обустроена Экотропа для экскурсий школьников. Ее оснастили информационными плакатами и указателями.
+				.col-12.col-md-8.offset-md-2.py-2
+					.accent-block: i С этих пор Экопарк стал местом не только экологического возрождения леса, но и экологического просвещения, где любознательные школьники могут почувствовать себя настоящими биологами: поработать своими руками в лесу, посетить познавательные экскурсии, побеседовать с преподавателями и студентами одного из самых известных вузов нашей страны.
+				.d-none.d-md-block.col-md-6.chrono-photo__container
+					.chrono-photo.h-100(style="background-image: url('img/content/ex (1).jpg')")
+				.col-9.offset-3.col-sm-10.offset-sm-2.offset-md-0.col-md-6.chrono__item
+					.chrono__text <b>В июле 2019 года</b> в Экопарке начало развиваться движение Волонтеров. В Экопарк приехала первая группа волонтеров - учащихся  6  классов из школы  «Лесные озёра» дер Новая Солнечногорского района. 
+				.d-none.d-md-block.col-md-6.chrono-photo__container
+					.chrono-photo.h-100(style="background-image: url('img/content/ex (1).jpg')")
+				.col-9.offset-3.col-sm-10.offset-sm-2.offset-md-0.col-md-6.chrono__item
+					.chrono__text <b>В 2019-2020 годах</b> на территории Экопарка планируется открыть реабилитационный лагерь для детей-инвалидов и воспитанников детских домов. Работы ведутся совместно с Благотворительным Фондом «Образ Жизни», который разрабатывает реабилитационные экопрограммы отдыха для детей на территории Экопарка. Началось проектирование и строительство

@@ -5,11 +5,12 @@ block variables
 	- var pageClass = 'index-page'
 block content
 	.menu.pb-4
-		.mobile-header.d-lg-none.text-white
+		.mobile-header.d-lg-none.text-white.d-flex.justify-content-start.align-items-center
 			.hamburger.hamburger--squeeze
 				span.hamburger-box
 				span.hamburger-inner
 				span.hamburger-box
+			.menu-title Меню
 		.mobile-menu__content
 			a(href="/").logo.d-block.d-lg-none.position-static.mb-4
 				img(src="../img/general/logo.png", alt="")
@@ -30,7 +31,7 @@ block content
 						li: a(href="").nav-link: span ШКОЛЬНИКАМ	
 				li: a.nav-link(href='#'): span ДЕЯТЕЛЬНОСТЬ ФОНДА
 				li: a.nav-link(href='#'): span ВОССТАНОВЛЕНИЕ ПРИРОДЫ
-				li: a.nav-link(href='#'): span контакты
+				li: a.nav-link(href='#video'): span контакты
 				
 	section.section-banner
 		.swiper-container.banner-slider
@@ -115,7 +116,7 @@ block content
 								.embed-responsive-item.card-photo(style="background-image: url('img/content/img4.jpg')")
 							.card-title полевые работы студентов биофака
 
-		section.section-about-us
+		section.section-about-us#vid1
 			.container
 				h1 Об Экопарке Фонда «Начинание»
 				.row.card-list.card-list--begin
@@ -201,12 +202,14 @@ block content
 
 	section.section-park-video
 		.park-section-bg
-		.container
-			h1 Осенние <br>красоты Экопарка 
+		.container.text-center
+			h1 Осенние <br>красоты Экопарка
 				.subtitle видовой клип
-			.embed-responsive.embed-responsive-4by3.w-50.m-auto
-				.embed-responsive-item
-					img(src="img/content/video-img.jpg", alt="").w-100
+			.video-container.d-inline-block.w-50
+				.close-video +
+				.embed-responsive.embed-responsive-16by9.m-auto
+					.embed-responsive-item.video-wrapper
+						video(src='img/content/Ekopark.mp4', poster='img/content/video-img.jpg')
 
 	section.section-reviews
 		.container.position-relative
@@ -226,7 +229,7 @@ block content
 							.embed-responsive.embed-responsive-1by1.mb-5
 								.embed-responsive-item.review-item__photo
 									img(src="img/content/review.jpg", alt="").m-auto.d-block.h-100
-							a(href="#" data-toggle="modal" data-target="#Modal").btn-fixed-slide.m-auto.nolink.text-white <b>отправить</b> свой отзыв
+							a(href="#" data-toggle="modal" data-target="#Modal-form").btn-fixed-slide.m-auto.nolink.text-white <b>отправить</b> свой отзыв
 					.swiper-slide
 						.review-item
 							.embed-responsive.embed-responsive-1by1.mb-5
@@ -248,7 +251,7 @@ block content
 							.embed-responsive.embed-responsive-1by1.mb-5
 								.embed-responsive-item.review-item__photo
 									img(src="img/content/review.jpg", alt="").m-auto.d-block.h-100
-							a(href="#" data-toggle="modal" data-target="#Modal").btn-fixed-slide.m-auto.nolink.text-white <b>отправить</b> свой отзыв
+							a(href="#" data-toggle="modal" data-target="#Modal-form").btn-fixed-slide.m-auto.nolink.text-white <b>отправить</b> свой отзыв
 					.swiper-slide
 						.review-item
 							.embed-responsive.embed-responsive-1by1.mb-5
@@ -259,24 +262,5 @@ block content
 							.review-item__author.text-accent.text-right <i>Учитель биологии <br> О.А. Дмитриева</i>
 			.swiper-button-prev.reviews-button-prev: <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40.02px" height="40.02px" viewBox="0 0 612.02 612.02" style="enable-background:new 0 0 612.02 612.02;" xml:space="preserve"><g><g id="_x35__11_"><g><path d="M596.96,269.674L342.381,15.094c-20.079-20.079-52.644-20.079-72.723,0c-20.079,20.079-20.079,52.644,0,72.723L487.852,306.01L269.658,524.202c-20.079,20.079-20.079,52.644,0,72.723s52.644,20.079,72.723,0L596.96,342.346C617.039,322.317,617.039,289.753,596.96,269.674z M290.858,254.258L88.744,41.238c-20.309-21.378-53.204-21.378-73.513,0s-20.309,56.058,0,77.462l165.371,174.289L15.231,467.278c-20.309,21.379-20.309,56.083,0,77.462s53.204,21.379,73.513,0L290.858,331.72C311.167,310.342,311.167,275.662,290.858,254.258z"/></g></g></g></svg>
 			.swiper-button-next.reviews-button-next: <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40.02px" height="40.02px" viewBox="0 0 612.02 612.02" style="enable-background:new 0 0 612.02 612.02;" xml:space="preserve"><g><g id="_x35__11_"><g><path d="M596.96,269.674L342.381,15.094c-20.079-20.079-52.644-20.079-72.723,0c-20.079,20.079-20.079,52.644,0,72.723L487.852,306.01L269.658,524.202c-20.079,20.079-20.079,52.644,0,72.723s52.644,20.079,72.723,0L596.96,342.346C617.039,322.317,617.039,289.753,596.96,269.674z M290.858,254.258L88.744,41.238c-20.309-21.378-53.204-21.378-73.513,0s-20.309,56.058,0,77.462l165.371,174.289L15.231,467.278c-20.309,21.379-20.309,56.083,0,77.462s53.204,21.379,73.513,0L290.858,331.72C311.167,310.342,311.167,275.662,290.858,254.258z"/></g></g></g></svg>
-			.reviews-btn.mt-4.d-lg-none(data-toggle="modal" data-target="#Modal")
+			.reviews-btn.mt-4.d-lg-none(data-toggle="Modal" data-target="#Modal-form")
 				a(href="#").btn-fixed-slide.m-auto.nolink.text-white <b>отправить</b> свой отзыв
-block modal
-	#Modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ModalLabel', aria-hidden='true')
-		.modal-dialog(role='document')
-			.modal-content
-				.modal-header
-					h5#ModalLabel.modal-title Добавить Отзыв
-					button.close(type='button', data-dismiss='modal', aria-label='Close')
-						span(aria-hidden='true') ×
-				.modal-body
-					form
-						.form-group
-							label.col-form-label(for='recipient-name') Имя:
-							input#recipient-name.form-control(type='text')
-						.form-group
-							label.col-form-label(for='message-text') Текст:
-							textarea#message-text.form-control
-				.modal-footer
-					button.btn(type='button', data-dismiss='modal') Закрыть
-					button.btn.btn-primary(type='button') Отправить

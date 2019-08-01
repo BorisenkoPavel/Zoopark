@@ -1,0 +1,26 @@
+extends ../template/main
+
+block variables
+  - var title = 'faq'
+  - var pageClass = 'secondary-page'
+block content
+  section.faq
+    .container
+      h1 Вопрос ответ
+      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint numquam porro doloremque ullam necessitatibus! Natus corporis voluptas nesciunt nulla atque incidunt ratione et. Nam ducimus a molestiae reiciendis eligendi error.
+      .accordion-wrapper
+        button.accordion Section
+        .details
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim adminim veniam, quisnostrud exercitation ullamco laboris nisiut aliquip exea commodo consequat.
+      .accordion-wrapper
+        button.accordion Section
+        .details
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim adminim veniam, quisnostrud exercitation ullamco laboris nisiut aliquip exea commodo consequat.
+      .accordion-wrapper
+        button.accordion Section
+        .details
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim adminim veniam, quisnostrud exercitation ullamco laboris nisiut aliquip exea commodo consequat.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim adminim veniam, quisnostrud exercitation ullamco laboris nisiut aliquip exea commodo consequat.
+      
+      .btn-container.mt-4.text-center
+        .btn(data-toggle="modal" data-target="#Modal-form") Задайте свой вопрос

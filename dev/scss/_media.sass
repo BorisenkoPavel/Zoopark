@@ -15,6 +15,8 @@
 		height: 1.3625rem
 	.card-title
 		font-size: 0.875rem
+	.header
+		padding-top: 2.55rem
 // ≥1200px
 +media-breakpoint-down(lg)
 	.news-form-container
@@ -90,12 +92,14 @@
 		margin-bottom: 1.5rem!important
 	.swiper-slide--button
 		display: none!important
+	.banner-item__photo
+    filter: brightness(0.6)
 // ≥768px
 +media-breakpoint-down(sm)
 	section
 		padding: 3vh 0
 	.section-park-video
-		.embed-responsive.embed-responsive-4by3
+		.video-container
 			width: 75%!important
 	.gallery-item__main-photo
 		min-height: 300px
@@ -110,8 +114,21 @@
 	.mgu-aside
 		.gallery-item
 			flex: 0 0 100%
+	.chrono-page
+		.chrono__item
+			min-height: auto
+	.banner-slider
+		.swiper-slide
+			.embed-responsive.embed-responsive-21by9
+				&:before
+					padding-top: 100%
 // ≥576px
 +media-breakpoint-down(xs)
+	.menu.is-active
+		.mobile-header
+			transform: translateX(-160px)
+		.logo
+			max-width: 53%
 	.accent-block 
     padding: 3vh
 	.swiper-button-prev.banner-button-prev, .swiper-button-next.banner-button-next
@@ -124,7 +141,7 @@
 		.swiper-slide
 			.embed-responsive.embed-responsive-21by9
 				&:before
-					padding-top: 80%
+					padding-top: 120%
 	.banner-item
 		&__title
 			font-size: 1.5rem
@@ -146,7 +163,7 @@
 	.news-container
 		padding: .5rem
 	.section-park-video
-		.embed-responsive.embed-responsive-4by3
+		.video-container
 			width: 100%!important
 	.form-news
 		img
@@ -154,6 +171,10 @@
 	.chrono__item
 		&:before, &:after
 			display: none
+	.chrono-page
+		.chrono__item, .chrono__text
+			&:before, &:after
+				display: block
 	.chrono__title
 		right: 115%
 		font-size: 1.2rem
@@ -164,6 +185,9 @@
 		padding: 0
 	.blank-right-block__mail:before, .blank-right-block__phone:before
 		display: none
+	.news-page__image
+		width: 100%!important
+		margin-bottom: 0.5rem
 /*==========  mobile First  ==========*/
 
 // ≤576px

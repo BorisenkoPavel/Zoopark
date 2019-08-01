@@ -323,4 +323,60 @@
 	flex-direction: column
 	display: flex
 	justify-content: center
+.chrono-page
+	.chrono-photo__container
+		padding-right: calc(7% + 20px)
+		padding-bottom: .5rem
+		padding-top: .5rem
+	.chrono-photo
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+	.chrono__item
+		min-height: 300px
+		display: flex
+		align-items: center
 
+.accordion-wrapper
+  border: 1px solid #fff
+  box-shadow: 0px 0px 5px -4px #000
+  margin-bottom: 0.75em
+
+
+button.accordion 
+  background-color: #d5e9cd
+  color: #336633
+  border: none
+  font-size: 1.25em
+  cursor: pointer
+  outline: none
+  padding: 0.5em 1.25em
+  text-align: left
+  transition: 0.5s
+  width: 100%
+
+
+button.active,
+button.accordion:hover
+  color: #777
+  background-color: #e1e1e1
+
+
+button.accordion:after 
+  content: "\002B"
+  float: right
+
+
+button.active.accordion:after 
+  content: "\2212"
+
+.details.active
+	padding-top: 15px
+
+.details
+	background-color: #ededed
+	color: #777
+	max-height: 0
+	overflow: hidden
+	padding: 0 1.5em
+	transition: max-height 0.2s ease-out, padding 0.2s ease-out

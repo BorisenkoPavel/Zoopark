@@ -1,11 +1,40 @@
 $(document).ready(function () {
 
+	// $(".goto").on("click", function (event) {
+	// 	event.preventDefault();
+	// 	var id = $(this).attr('href'),
+	// 			top = $(id).offset().top-150;
+	// 	$('body, html').animate({
+	// 		scrollTop: top
+	// 	}, 350);
+	// });
+
 	$(document).on("click", '[data-toggle="lightbox"]', function(event) {
 		event.preventDefault();
 		$(this).ekkoLightbox();
 	});
 	
 	AOS.init();
+
+	var accordion = document.getElementsByClassName("accordion");
+
+	for (let i = 0; i < accordion.length; i++) {
+		accordion[i].addEventListener("click", function(){
+			this.classList.toggle("active");
+			var details = this.nextElementSibling;
+			details.classList.toggle("active");
+
+			if (details.style.maxHeight) {
+				details.style.maxHeight = null;
+				// details.addEventListener("transitionend", function(){
+				// 	details.style.paddingTop = null
+				// })
+
+			} else {
+				details.style.maxHeight = details.scrollHeight + 15 + "px";
+			}
+		});
+	}
 
 // 	$(".nav").sticky({topSpacing:0});
 //   $('.nav').on('sticky-start', function() { 
@@ -81,6 +110,11 @@ $(document).ready(function () {
 		}
 	});
 
+	$('.menu-title').on('click', function(){
+
+		$('.hamburger--squeeze').toggleClass('is-active')
+		$('.menu').toggleClass('is-active')
+	})
 	$('.hamburger--squeeze').on('click', function(){
 
 		$(this).toggleClass('is-active')
@@ -113,4 +147,51 @@ $(document).ready(function () {
 			event.preventDefault()
 			$(this).siblings('.nav__sub-menu').slideToggle()
 		})
+
+		var videoPlayButton,
+    videoWrapper = document.getElementsByClassName('video-wrapper')[0],
+    video = document.getElementsByTagName('video')[0],
+		videoMethods = {}
+		
+		videoMethods.renderVideoPlayButton = function() {
+    if (videoWrapper.contains(video)) {
+      this.formatVideoPlayButton();
+      video.classList.add('has-media-controls-hidden');
+      videoPlayButton = document.getElementsByClassName('video-overlay-play-button')[0];
+      videoPlayButton.addEventListener('click', this.hideVideoPlayButton);
+    }
+	}
+	
+  videoMethods.formatVideoPlayButton = function () {
+    videoWrapper.insertAdjacentHTML('beforeend', '\
+                <svg class="video-overlay-play-button" viewBox="0 0 200 200" alt="Play video">\
+                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff"/>\
+                    <polygon points="70, 55 70, 145 145, 100" fill="#fff"/>\
+                </svg>\
+            ');
+	}
+	
+  videoMethods.hideVideoPlayButton = function() {
+    video.play();
+    videoPlayButton.classList.add('is-hidden');
+    video.classList.remove('has-media-controls-hidden');
+    video.setAttribute('controls', 'controls');
+    $('.close-video').removeClass('hidden');
+  }
+
+	// video.addEventListener("pause", function (){
+	// 	this.src = this.src
+	// 	videoPlayButton.classList.remove('is-hidden')
+	// 	video.classList.add('has-media-controls-hidden')
+	// })
+	$('.close-video').on('click', function (){
+		video.src = video.src
+		videoPlayButton.classList.remove('is-hidden')
+		video.classList.add('has-media-controls-hidden')
+		$(this).addClass('hidden')
+	})
+	// var svgButton = videoWrapper.querySelector('.video-overlay-play-button')
+	// svgButton.
+videoMethods.renderVideoPlayButton()
+
 });

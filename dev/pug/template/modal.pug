@@ -1,0 +1,32 @@
+#Modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ModalLabel', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h4#ModalLabel.modal-title
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        .modal-text.subtitle.b Спасибо
+      .modal-footer
+        button.btn.btn-primary(type='button') Ок
+
+#Modal-form.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ModalLabel', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h4#ModalLabel.modal-title Оставьте свой отзыв
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        form
+          .input-container
+            label(for="input1") Имя Фамилия
+            input(type="text" id="input1")
+          .input-container
+            label(for="input2") Телефон
+            input(type="text" id="input2")
+          .input-container
+            label(for="input3") Комментарий
+            textarea(name="", rows="3")
+      .modal-footer
+        button.btn.btn-primary(type='button') Ок
