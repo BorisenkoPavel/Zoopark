@@ -61,7 +61,6 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
   return gulp.src([
     // 'node_modules/bootstrap/js/dist/.js',
-    'node_modules/sticky/sticky.js',
     'node_modules/swiper/dist/js/swiper.min.js',
     'node_modules/aos/dist/aos.js',
     // 'node_modules/svg4everybody/dist/svg4everybody.min.js',
