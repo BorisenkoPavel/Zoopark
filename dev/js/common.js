@@ -101,11 +101,13 @@ $(document).ready(function () {
 			992: {
 				navigation: false,
 				slidesPerView: 2,
+				slidesPerGroup: 2,
 			},
 			// when window width is <= 640px
 			576: {
 				slidesPerView: 1,
 				spaceBetween: 30,
+				slidesPerGroup: 1,
 			}
 		}
 	});
@@ -149,49 +151,44 @@ $(document).ready(function () {
 		})
 
 		var videoPlayButton,
-    videoWrapper = document.getElementsByClassName('video-wrapper')[0],
-    video = document.getElementsByTagName('video')[0],
-		videoMethods = {}
-		
-		videoMethods.renderVideoPlayButton = function() {
-    if (videoWrapper.contains(video)) {
-      this.formatVideoPlayButton();
-      video.classList.add('has-media-controls-hidden');
-      videoPlayButton = document.getElementsByClassName('video-overlay-play-button')[0];
-      videoPlayButton.addEventListener('click', this.hideVideoPlayButton);
-    }
-	}
-	
-  videoMethods.formatVideoPlayButton = function () {
-    videoWrapper.insertAdjacentHTML('beforeend', '\
-                <svg class="video-overlay-play-button" viewBox="0 0 200 200" alt="Play video">\
-                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff"/>\
-                    <polygon points="70, 55 70, 145 145, 100" fill="#fff"/>\
-                </svg>\
-            ');
-	}
-	
-  videoMethods.hideVideoPlayButton = function() {
-    video.play();
-    videoPlayButton.classList.add('is-hidden');
-    video.classList.remove('has-media-controls-hidden');
-    video.setAttribute('controls', 'controls');
-    $('.close-video').removeClass('hidden');
-  }
+    videoWrapper = $('.video-wrapper'),
+    video = $('video'),
+    videoMethods = {};
 
-	// video.addEventListener("pause", function (){
-	// 	this.src = this.src
-	// 	videoPlayButton.classList.remove('is-hidden')
-	// 	video.classList.add('has-media-controls-hidden')
-	// })
-	$('.close-video').on('click', function (){
-		video.src = video.src
-		videoPlayButton.classList.remove('is-hidden')
-		video.classList.add('has-media-controls-hidden')
-		$(this).addClass('hidden')
-	})
-	// var svgButton = videoWrapper.querySelector('.video-overlay-play-button')
-	// svgButton.
-videoMethods.renderVideoPlayButton()
+  videoMethods.renderVideoPlayButton = function() {
+    if (videoWrapper[0].contains(video[0])) {
+      this.formatVideoPlayButton();
+      video.addClass('has-media-controls-hidden');
+      videoPlayButton = $('.video-overlay-play-button');
+      videoPlayButton.click(this.hideVideoPlayButton);
+    }
+  };
+
+  videoMethods.formatVideoPlayButton = function () {
+    videoWrapper[0].insertAdjacentHTML("beforeEnd",
+`<svg class="video-overlay-play-button" viewBox="0 0 200 200" alt="Play video">
+	<circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff"/>
+	<polygon points="70, 55 70, 145 145, 100" fill="#fff"/>
+</svg>`
+    );
+  };
+
+  videoMethods.hideVideoPlayButton = function() {
+    video[0].play();
+    videoPlayButton.addClass('is-hidden');
+    video.removeClass('has-media-controls-hidden');
+    video.attr('controls', 'controls');
+    $('.close-video').removeClass('hidden');
+  };
+
+  $('.close-video').click(function (){
+    //video.src = video.src;
+		video[0].src = video[0].src;
+    videoPlayButton.removeClass('is-hidden');
+    video.addClass('has-media-controls-hidden');
+    $(this).addClass('hidden');
+  });
+
+videoMethods.renderVideoPlayButton();
 
 });
